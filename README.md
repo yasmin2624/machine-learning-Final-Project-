@@ -1,55 +1,67 @@
-# Machine Learning Final Project
+# 🧠 Machine Learning Final Project
 
-## Overview
-This project analyzes a **Students Performance** dataset and builds predictive regression models to estimate student scores.  
-The goal is to explore data, clean it, and implement machine learning techniques to identify relationships between various factors and student performance.
+## 📝 Overview
 
-## Features
-- **Data Cleaning**  
-  Handling missing values, duplicates, and ensuring correct data types.
+This project consists of **two main parts**, each focusing on building and training machine learning models on different datasets to solve predictive problems.  
+It covers the full workflow including **Exploratory Data Analysis (EDA)**, data preprocessing, model training, and evaluation.
 
-- **Exploratory Data Analysis (EDA)**  
-  - Statistical summaries  
-  - Histograms, scatter plots, correlation heatmaps  
+---
 
-- **Feature Engineering**  
-  - Label Encoding of categorical variables  
-  - Feature scaling (StandardScaler)  
-  - Polynomial feature generation for non-linear modeling  
+## 🎯 Part 1: Predicting Student Performance
 
-- **Machine Learning Models**  
-  - Linear Regression  
-  - Polynomial Regression  
+**Objective**:  
+Build models to predict student performance in different tests (Math, Reading, Writing) based on social and personal factors.
 
-- **Model Evaluation**  
-  - Mean Squared Error (MSE)  
-  - R-squared (R²) score  
+**Dataset**:  
+`StudentsPerformance.csv`
 
-## Project Structure
-machine-learning-Final-Project-/
-│
-├── Untitled58(3).ipynb # Jupyter Notebook with full code and analysis
-├── Report.pdf # Detailed report discussing methodology and findings
-├── README.md # This file
-└── dataset/StudentsPerformance.csv # Dataset used in the project
+**Methodology**:
 
-## Requirements
-- Python 3.x
-- Libraries:
-  ```bash
-  pip install pandas numpy matplotlib seaborn scikit-learn
-Usage
-Clone the repository:
+* **Exploratory Data Analysis**:  
+  Examined data properties, checked for missing and duplicate values, generated descriptive statistics, and visualized variable relationships.
+* **Data Preprocessing**:  
+  Encoded categorical variables using `LabelEncoder` and scaled numerical features using `StandardScaler`.
+* **Model Training**:  
+  Trained multiple models including:
+  * Linear Regression
+  * Polynomial Regression
+  * A simple Neural Network
+  * Logistic Regression
+  * Support Vector Machine (SVM)
+* **Results**:  
+  The Neural Network and Logistic Regression models achieved the best performance in this part of the project.
 
-git clone https://github.com/yasmin2624/machine-learning-Final-Project-.git
-Open the Jupyter Notebook:
+---
 
-jupyter notebook Untitled58(3).ipynb
-Run all cells sequentially to reproduce the analysis and model results.
+## ❤️ Part 2: Predicting Heart Disease
 
-Results
-The analysis highlights trends and correlations between demographic/socioeconomic factors and academic scores.
+**Objective**:  
+Predict the presence of heart disease based on a set of patient clinical attributes.
 
-Polynomial regression provided improved fit for some relationships compared to simple linear regression.
+**Dataset**:  
+`heart.csv` (from the UCI Machine Learning Repository)
 
-Evaluation metrics (MSE and R²) demonstrate the performance and reliability of the trained models.
+**Methodology**:
+
+* **Exploratory Data Analysis**:  
+  Checked for missing or duplicate values and analyzed the distribution of key features.
+* **Target Definition**:  
+  Defined `target` as the dependent variable (indicating heart disease presence) and selected relevant features for prediction.
+* **Model Training**:  
+  Used a Logistic Regression model and evaluated it with:
+  * Confusion Matrix
+  * Classification Report
+* **Results**:  
+  The Logistic Regression model achieved high accuracy in predicting heart disease, demonstrating its effectiveness for this type of data.
+
+---
+
+## 🛠 Requirements
+
+* Python 3.8+
+* Jupyter Notebook
+
+Install dependencies:
+
+```bash
+pip install pandas numpy matplotlib seaborn scikit-learn
